@@ -1,0 +1,31 @@
+<% if user_signed_in? %>
+  <h1>UHAHAHAHHAHA!</h1>
+<% else %>
+  <div class="center jumbotron">
+    <div class="row">
+	    <div class="col-md-6">
+		    <h2>Log in!</h2>
+		    
+		    <%= devise_error_messages! %>
+	    
+			  <div class="panel panel-default">
+			     <div class="panel-body">
+		        	<%= render 'devise/sessions/form' %>
+			     </div>
+			  </div>
+	     </div>
+		 <div class="col-md-6">
+		    <h2>Sign up now!</h2>
+		    
+		    <%= devise_error_messages! %>
+	    
+			  <div class="panel panel-default">
+			     <div class="panel-body">
+		        	<%= render 'devise/registrations/form' %>
+			     </div>
+			  </div>
+		  </div>
+	</div>
+  </div>
+
+<% end %>
