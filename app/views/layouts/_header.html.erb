@@ -1,5 +1,6 @@
 <% if user_signed_in? %>
   <%= link_to "Log out", logout_path, method: :delete %>
+  <%= link_to "My account", account_path %>
 <% else %>
   <%= link_to "Sign Up", signup_path %>
   <%= link_to "Sign In", login_path %>

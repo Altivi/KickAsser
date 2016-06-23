@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :projects
   root 'welcome#index'
 
   devise_for :users, path: 'auth'
@@ -11,6 +12,10 @@ Rails.application.routes.draw do
     post "/signup" => "devise/registrations#create"
     delete "/logout" => "devise/sessions#destroy"
   end
+
+  get '/account', to: 'accounts#show'
+
+  resources :projects
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
